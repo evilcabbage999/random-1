@@ -6,7 +6,6 @@ const config = {
   url: 'https://thebloxrebellion.netlify.app',
   baseUrl: '/',
 
-  // Ignore broken links to prevent build failures
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
 
@@ -20,12 +19,12 @@ const config = {
       'classic',
       {
         docs: {
-          sidebarPath: './sidebars.ts',
-          routeBasePath: '/', 
+          sidebarPath: require.resolve('./sidebars.ts'), // ✅ Ensure correct path
+          routeBasePath: '/docs', // ✅ This makes docs appear under /docs
         },
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       },
     ],
@@ -38,7 +37,9 @@ const config = {
         alt: 'Bloxstreet Logo',
         src: 'img/logo.svg',
       },
-      items: [],
+      items: [
+        { to: '/docs', label: 'Docs', position: 'left' }, // ✅ Add link to docs
+      ],
     },
     footer: {
       style: 'dark',
