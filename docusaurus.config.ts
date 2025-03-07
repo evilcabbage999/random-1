@@ -3,7 +3,7 @@ const config = {
   tagline: 'The Rebellion Has Begun',
   favicon: 'img/favicon.ico',
 
-  url: 'https://google.com',
+  url: 'https://thebloxrebellion.netlify.app',
   baseUrl: '/',
 
   // Ignore broken links to prevent build failures
