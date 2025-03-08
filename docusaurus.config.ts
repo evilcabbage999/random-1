@@ -19,7 +19,7 @@ const config = {
       'classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.ts'), // ✅ Ensure correct path
+          sidebarPath: require.resolve('./sidebars.js'), // ✅ Ensure correct path
           routeBasePath: '/docs', // ✅ This makes docs appear under /docs
         },
         blog: false,
