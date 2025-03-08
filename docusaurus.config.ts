@@ -4,7 +4,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   url: 'https://thebloxrebellion.netlify.app',
-  baseUrl: '/',
+  baseUrl: '/',  // Keep this as '/' to serve at the root
 
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'ignore',
@@ -19,8 +19,8 @@ const config = {
       'classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'), // ✅ Ensure correct path
-          routeBasePath: '/docs', // ✅ This makes docs appear under /docs
+          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: '/',  // Serve docs at the root URL
         },
         blog: false,
         theme: {
@@ -38,7 +38,7 @@ const config = {
         src: 'img/logo.svg',
       },
       items: [
-        { to: '/docs', label: 'Docs', position: 'left' }, // ✅ Add link to docs
+        { to: '/docs', label: 'Docs', position: 'left' }, // Link to /docs in the navbar
       ],
     },
     footer: {
